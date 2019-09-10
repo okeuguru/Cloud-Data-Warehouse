@@ -46,7 +46,7 @@ The image below shows the architchure used in this project
 
 #### Data Model
 
-The image below shows the data model used in this project for the analytics model (star schema) and the data staging
+The image below shows the data model used in this project for the analytics (star schema) as well as the data staging
 
 ![Data Model](./img/data-model.png)
 
