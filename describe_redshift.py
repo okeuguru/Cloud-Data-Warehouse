@@ -21,6 +21,7 @@ def prettyRedshiftProps(props):
     pd.set_option('display.max_colwidth', -1)
     keysToShow = ["ClusterIdentifier", "NodeType", "ClusterStatus", "MasterUsername", "DBName", "Endpoint", "NumberOfNodes", 'VpcId']
     x = [(k, v) for k,v in props.items() if k in keysToShow]
+    pd.DataFrame(data=x, columns=["Key", "Value"]).show()
     return pd.DataFrame(data=x, columns=["Key", "Value"])
 
 myClusterProps = redshift.describe_clusters(ClusterIdentifier=DWH_CLUSTER_IDENTIFIER)['Clusters'][0]
